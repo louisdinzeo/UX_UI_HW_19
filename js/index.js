@@ -1,16 +1,11 @@
+console.log
+$(document).ready(function() {
+  $('.dropdown-toggle').click(function() {
+    $('.dropdown-menu').toggle();
+  });
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
+  $('.dropdown-menu').click(function() {
+    var selectedOption = $(this).text();
+    $('.dropdown-toggle').text(selectedOption);
+  });
+});

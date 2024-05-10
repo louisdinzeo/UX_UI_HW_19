@@ -2,6 +2,11 @@
 <html>
     <head>
         <!-- <link rel=“stylesheet” href="./css/style.css"> -->
+        <script src="//code.jquery.com/jquery-3.7.0.min.js"> </script>
+        <script> function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+         }
+            </script>
         <link rel="stylesheet" href="./css/style2.css">
         <title></title>
     </head>
@@ -9,19 +14,36 @@
         <header class="navigation">           
         <div class="inline-block logo">
         <img src="images/Logo.png">
-        <nav class="inline-block">  
+        <nav class="inline-block"> 
         <ul>
-    <li> About </li>
-    <li> Skills </li>
-    <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Work</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+            <div class="dropdown"> 
+                <button onclick="myFunction()" class="dropbtn">dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Myself</a>
+                    <a href="#">My UI Journey</a>
+                    <a href="#">My Music Journey</a>
+                </div>
             </div>
-          </div> 
-    <li> Contact </li>
+    <div class="dropdown"> 
+        <button onclick="myFunction()" class="dropbtn"> Skills </button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#">UI Skills</a>
+            <a href="#">Music</a>
+            <a href="#">Other</a>
+        </div>
+    </div>
+    <div class="dropdown"> 
+        <button onclick="myFunction()" class="dropbtn"> Work </button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#">UI Portfolio</a>
+            <a href="#">Music Portfolio</a>
+        </div>
+    </div>
+    <div class="dropdown"> 
+        <button onclick="myFunction()" class="dropbtn"> Contact </button>
+        <div id="myDropdown" class="dropdown-content">
+        </div>
+    </div>
         </ul>
         </nav>
         </div>
@@ -32,6 +54,50 @@
             <p> Feels a pull to help others create an aesthetic space for their product. Currently works for Capella as a Admissions Representative, which he likes, but hopes to find work in the UX field. </p>
             <button> Download Resume </button>
         </div>
+<!--  My UX Skills section coded using CSS flex -->
+<section class="mySkills"> 
+    <h1> My UX Skills </h1>
+    <div class="flexContainer"> 
+        <div> 
+            <img src="images/Ambition Skill.jpg">
+            <h3> Creative Solutions </h3>
+            <p> Sometimes my ideas are a little ambitious, but I come up with tons of ideas that I believe end up turning out awesome. </p>
+        </div>
+        <div> 
+            <img src="images/Communication Skill.png"> 
+            <h3> Customer Relations </h3>
+            <p> I give it my best to make sure every person that I interact with leaves the interaction feeling better than when they left. </p>
+        </div>
+        <div> 
+            <img src="images/Tech Savvy.png">
+            <h3> Fast at Learning Tech </h3>
+            <p> I am great with learning new softwares due to being tech-savvy and having previous work experience that used a wide variety of tech. </p>
+        </div>
+    </div>
+
+<!-- My Work Section Constructed using CSS Grid -->
+<section> 
+    <h1> My Work </h1>
+    <div class="workGrid"> 
+        <div>
+            <img src="images/THRUProject.png">
+        </div>
+        <div> 
+            <h4> THRUProject </h4>
+            <p> - </p>    
+            <button> View Project </button>
+        </div>
+        <div>
+            <img src="images/Ideation.png">    
+        </div>
+        <div>
+            <h4> Ideation </h4>
+            <p> - </p>
+            <button> View Project </button>
+        </div>
+    <h3> View All Projects </h3>   
+    </div>
+</section>
         <footer> 
             <ul>
                 <li> About </li>
@@ -41,5 +107,14 @@
             </ul>
         </footer>    
     </body>
-    <script src="js/index.js"></script>
 </html>
+<script>
+$(document).ready(function() {
+    $('.dropdown-toggle').click(function() {
+      $('.dropdown-menu').toggle();
+    });
+  });
+</script>
+
+<!-- Used this site for the JQuery dropdown: https://www.techieclues.com/blogs/how-to-create-a-dropdown-menu-with-jquery -->
+<!-- Used this site as well: https://www.w3schools.com/howto/howto_js_dropdown.asp -->
